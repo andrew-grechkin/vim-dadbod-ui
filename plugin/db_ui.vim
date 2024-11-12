@@ -110,7 +110,7 @@ let g:db_ui_icons = extend(g:db_ui_icons, s:dbui_icons)
 
 augroup dbui
   autocmd!
-  autocmd BufRead,BufNewFile *.dbout set filetype=dbout
+  autocmd BufRead,BufNewFile *.dbout set filetype=csv
   autocmd BufReadPost *.dbout nested call db_ui#save_dbout(expand('<afile>'))
   autocmd FileType dbout setlocal foldmethod=expr foldexpr=db_ui#dbout#foldexpr(v:lnum) | normal!zo
   autocmd FileType dbout,dbui autocmd BufEnter,WinEnter <buffer> stopinsert

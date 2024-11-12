@@ -364,7 +364,7 @@ function! s:drawer.render(...) abort
   setlocal modifiable
   silent 1,$delete _
   call setline(1, content)
-  setlocal nomodifiable
+"   setlocal nomodifiable
   call winrestview(view)
 
   if restore_win
